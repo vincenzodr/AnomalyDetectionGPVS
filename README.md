@@ -25,7 +25,27 @@ This project focuses on the detection of anomalies in PV systems using innovativ
 ## Data
 
 The project uses the GPVS-Faults dataset, a valuable resource for PV anomaly detection.
-You can access the GPVS-Faults dataset [here]([https://your-dataset-link.com](https://data.mendeley.com/datasets/n76t439f65/1)). For more information about the dataset, please refer to the documentation provided with the dataset.
+You can access the GPVS-Faults dataset [here](https://data.mendeley.com/datasets/n76t439f65/1). For more information about the dataset, please refer to the documentation provided with the dataset.
+
+### Data Preprocessing
+
+Before utilizing the dataset for anomaly detection, it's essential to prepare the data. The project includes the following data preprocessing techniques:
+
+- **Sliding Window**: Sliding window techniques are applied to segment time series data into smaller, overlapping or non-overlapping windows. This enables the models to capture temporal patterns effectively.
+
+- **Low Pass Filter**: Low pass filtering is used to remove high-frequency noise and fluctuations from the time series data. It helps in obtaining a smoother representation of the PV system's behavior.
+
+- **Min-Max Normalization**: Min-Max normalization is applied to scale the data to a specific range, typically [0, 1]. This ensures that all features have a similar influence on the model and prevents bias due to different scales.
+
+### Balancing Techniques
+
+One challenge in anomaly detection is dealing with imbalanced data, where normal instances significantly outnumber anomalies. To address this challenge, the project employs two balancing techniques:
+
+- **Oversampling**: Oversampling is a technique that increases the representation of the minority class by duplicating or generating more samples from it. This ensures a more balanced dataset for training.
+
+- **GAN Data Augmentation**: Conditional Generative Adversarial Networks (cGANs) are used to generate synthetic samples of the minority class. GAN data augmentation is an effective way to balance the dataset while introducing realistic variations.
+
+These preprocessing and balancing techniques contribute to improved model performance, particularly in scenarios with imbalanced class distributions.
 
 ## Models
 
