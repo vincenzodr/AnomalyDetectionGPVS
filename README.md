@@ -31,7 +31,7 @@ You can access the GPVS-Faults dataset [here](https://data.mendeley.com/datasets
 
 Before utilizing the dataset for anomaly detection, it's essential to prepare the data. The project includes the following data preprocessing techniques:
 
-- **Sliding Window**: Sliding window techniques are applied to segment time series data into smaller, overlapping or non-overlapping windows. This enables the models to capture temporal patterns effectively.
+- **Sliding Window**: Sliding window techniques are applied to segment original data into overlapping or non-overlapping time series. This enables the models to capture temporal patterns effectively.
 
 - **Low Pass Filter**: Low pass filtering is used to remove high-frequency noise and fluctuations from the time series data. It helps in obtaining a smoother representation of the PV system's behavior.
 
