@@ -7,6 +7,7 @@
 - [Data](#data)
 - [Models](#models)
 - [Evaluation](#evaluation)
+- [Usage](#usage)
 
 ## Introduction
 
@@ -63,3 +64,19 @@ We employ evaluation metrics to assess the performance of the anomaly detection 
 - **Recall**: The proportion of true positive predictions out of all actual positive instances.
 - **F1-Score**: The harmonic mean of precision and recall, providing a balanced assessment of model performance.
 - **Accuracy**: The proportion of correct predictions out of all predictions made.
+
+## Usage
+
+To use this project, follow these steps:
+
+1. **Download the Dataset**: Start by downloading the dataset from the provided link. You can access the GPVS-Faults dataset [here](https://data.mendeley.com/datasets/n76t439f65/1).
+
+2. **Data Preprocessing**: Use the notebook [gpvs-npy.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/Dataset/gpvs-npy.ipynb) to preprocess the dataset. This notebook will handle essential data preprocessing steps, including sliding window and low pass filtering.
+
+3. **Train GAN Model**: Employ the notebook [conditionaltimegan.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/GAN/conditionaltimegan.ipynb) to train the Generative Adversarial Network (GAN) model. This model plays a crucial role in generating synthetic data to balance the dataset.
+
+4. **Generate Synthetic Data**: After training the GAN model, use the notebook [generate-gan-data.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/GAN/generate-gan-data.ipynb) to generate synthetic data. This step helps balance the dataset by creating additional samples of the minority class.
+
+5. **Split Dataset**: Utilize the notebook [gpvs_gan.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/Dataset/gpvs_gan.ipynb) to split the dataset into training, validation, and test sets. This step ensures that you have well-organized data for training and evaluating your models.
+
+6. **Train and Test the Model**: Choose the model of your preference, whether it's LSTM-FCN or TimesNet, and use the respective notebook, either [lstm-fcn.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/lstm-fcn.ipynb) or [timesnet-classification.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/timesnet-classification.ipynb), to train and test the selected model on the preprocessed and balanced dataset.
