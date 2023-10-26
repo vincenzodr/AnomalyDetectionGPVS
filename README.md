@@ -80,3 +80,5 @@ To use this project, follow these steps:
 5. **Split Dataset**: Utilize the notebook [gpvs_gan.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/Dataset/gpvs_gan.ipynb) to split the dataset into training, validation, and test sets. This step ensures that you have well-organized data for training and evaluating your models.
 
 6. **Train and Test the Model**: Choose the model of your preference, whether it's LSTM-FCN or TimesNet, and use the respective notebook, either [lstm-fcn.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/lstm-fcn.ipynb) or [timesnet-classification.ipynb](https://github.com/vincenzodr/AnomalyDetectionGPVS/blob/main/timesnet-classification.ipynb), to train and test the selected model on the preprocessed and balanced dataset.
+
+![Proposed approach workflow.](./images/workflow.png)
